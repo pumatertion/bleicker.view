@@ -21,9 +21,4 @@ interface ViewInterface {
 	 */
 	public function assign($name, $value);
 
-	/**
-	 * @param $name
-	 * @return mixed
-	 */
-	public function get($name);
 }

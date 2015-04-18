@@ -17,6 +17,16 @@ abstract class AbstractViewResolver implements ViewResolverInterface {
 	protected $request;
 
 	/**
+	 * @var string
+	 */
+	protected $controllerName;
+
+	/**
+	 * @var string
+	 */
+	protected $methodName;
+
+	/**
 	 * @return MainRequestInterface
 	 */
 	public function getRequest() {
@@ -30,5 +40,37 @@ abstract class AbstractViewResolver implements ViewResolverInterface {
 	public function setRequest(MainRequestInterface $request) {
 		$this->request = $request;
 		return $this;
+	}
+
+	/**
+	 * @param string $methodName
+	 * @return $this
+	 */
+	public function setMethodName($methodName) {
+		$this->methodName = $methodName;
+		return $this;
+	}
+
+	/**
+	 * @param string $controllerName
+	 * @return $this
+	 */
+	public function setControllerName($controllerName) {
+		$this->controllerName = $controllerName;
+		return $this;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getMethodName() {
+		return $this->methodName;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getControllerName() {
+		return $this->controllerName;
 	}
 }

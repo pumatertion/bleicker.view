@@ -12,9 +12,10 @@ use Bleicker\View\Html\View;
 class ViewResolver extends AbstractViewResolver {
 
 	/**
-	 * @return ViewInterface
+	 * @return string
 	 */
 	public function resolve() {
-		return new View();
+		return new View($this->controllerName, $this->methodName);
 	}
+
 }

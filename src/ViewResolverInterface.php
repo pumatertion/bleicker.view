@@ -23,6 +23,28 @@ interface ViewResolverInterface {
 	public function setRequest(MainRequestInterface $request);
 
 	/**
+	 * @param string $methodName
+	 * @return $this
+	 */
+	public function setMethodName($methodName);
+
+	/**
+	 * @param string $controllerName
+	 * @return $this
+	 */
+	public function setControllerName($controllerName);
+
+	/**
+	 * @return string
+	 */
+	public function getMethodName();
+
+	/**
+	 * @return string
+	 */
+	public function getControllerName();
+
+	/**
 	 * @return ViewInterface
 	 */
 	public function resolve();
