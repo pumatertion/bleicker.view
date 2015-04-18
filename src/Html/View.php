@@ -4,12 +4,12 @@ namespace Bleicker\View\Html;
 
 use Bleicker\Framework\WebApplication;
 use Bleicker\View\AbstractView;
+use TYPO3\Fluid\Core\Cache\FluidCacheInterface;
 use TYPO3\Fluid\Core\Rendering\RenderingContext;
 use TYPO3\Fluid\Core\Variables\StandardVariableProvider;
 use TYPO3\Fluid\Core\ViewHelper\ViewHelperVariableContainer;
 use TYPO3\Fluid\View\TemplatePaths;
 use TYPO3\Fluid\View\TemplateView;
-use TYPO3\Fluid\Core\Cache\FluidCacheInterface;
 
 /**
  * Class View
@@ -36,19 +36,19 @@ class View extends AbstractView {
 
 		$paths = new TemplatePaths();
 		$paths->setTemplateRootPaths(array(
-			ROOT_DIRECTORY . '/Templates'
+			ROOT_DIRECTORY . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR
 		));
 		$paths->setLayoutRootPaths(array(
-			ROOT_DIRECTORY . '/Templates/Layouts'
+			ROOT_DIRECTORY . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'Layouts' . DIRECTORY_SEPARATOR
 		));
 		$paths->setPartialRootPaths(array(
-			ROOT_DIRECTORY . '/Templates/Partials'
+			ROOT_DIRECTORY . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'Partials' . DIRECTORY_SEPARATOR
 		));
 
 		$this->fluid = new TemplateView($paths, $context);
 
 		$cache = WebApplication::getRegistry()->getImplementation(FluidCacheInterface::class);
-		if($cache !== NULL){
+		if ($cache !== NULL) {
 			$this->fluid->setCache($cache);
 		}
 	}
@@ -58,7 +58,7 @@ class View extends AbstractView {
 	 * @return string
 	 */
 	protected function ensureControllerNameIsDirectoryPath($controllerName) {
-		return DIRECTORY_SEPARATOR . str_ireplace('\\', DIRECTORY_SEPARATOR, $controllerName);
+		return str_ireplace('\\', DIRECTORY_SEPARATOR, $controllerName);
 	}
 
 	/**
