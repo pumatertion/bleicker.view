@@ -26,8 +26,9 @@ class View extends AbstractView {
 	/**
 	 * @param string $controllerName
 	 * @param string $methodName
+	 * @param string $format
 	 */
-	public function __construct($controllerName, $methodName) {
+	public function __construct($controllerName, $methodName, $format = 'html') {
 		$context = new RenderingContext();
 		$context->setControllerName($this->ensureControllerNameIsDirectoryPath($controllerName));
 		$context->setControllerAction($methodName);
@@ -44,6 +45,7 @@ class View extends AbstractView {
 		$paths->setPartialRootPaths(array(
 			ROOT_DIRECTORY . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'Partials' . DIRECTORY_SEPARATOR
 		));
+		$paths->setFormat($format);
 
 		$this->fluid = new TemplateView($paths, $context);
 
