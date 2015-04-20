@@ -1,6 +1,6 @@
 <?php
 
-namespace Bleicker\View\Html;
+namespace Bleicker\View\Template;
 
 use Bleicker\Framework\Registry;
 use Bleicker\View\AbstractView;
@@ -14,7 +14,7 @@ use TYPO3\Fluid\View\TemplateView;
 /**
  * Class View
  *
- * @package Bleicker\View\Html
+ * @package Bleicker\View\Template
  */
 class View extends AbstractView {
 
