@@ -39,5 +39,4 @@ abstract class AbstractView implements ViewInterface {
 			return $this->storage->offsetGet($name);
 		}
 	}
-
 }

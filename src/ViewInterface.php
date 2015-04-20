@@ -20,5 +20,4 @@ interface ViewInterface {
 	 * @return $this
 	 */
 	public function assign($name, $value);
-
 }
