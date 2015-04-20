@@ -2,7 +2,7 @@
 
 namespace Bleicker\View\Html;
 
-use Bleicker\Framework\WebApplication;
+use Bleicker\Framework\Registry;
 use Bleicker\View\AbstractView;
 use TYPO3\Fluid\Core\Cache\FluidCacheInterface;
 use TYPO3\Fluid\Core\Rendering\RenderingContext;
@@ -47,7 +47,7 @@ class View extends AbstractView {
 
 		$this->fluid = new TemplateView($paths, $context);
 
-		$cache = WebApplication::getRegistry()->getImplementation(FluidCacheInterface::class);
+		$cache = Registry::getImplementation(FluidCacheInterface::class);
 		if ($cache !== NULL) {
 			$this->fluid->setCache($cache);
 		}
