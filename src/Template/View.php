@@ -74,6 +74,15 @@ class View extends AbstractView {
 	}
 
 	/**
+	 * @param array $values
+	 * @return $this
+	 */
+	public function assignMultiple(array $values) {
+		$this->fluid->assignMultiple($values);
+		return $this;
+	}
+
+	/**
 	 * @return string
 	 */
 	public function render() {

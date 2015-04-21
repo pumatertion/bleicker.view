@@ -20,4 +20,11 @@ interface ViewInterface {
 	 * @return $this
 	 */
 	public function assign($name, $value);
+
+	/**
+	 * @param array $values
+	 * @return $this
+	 */
+	public function assignMultiple(array $values);
+
 }
