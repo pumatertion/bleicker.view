@@ -2,7 +2,8 @@
 	"name": "bleicker/view",
 	"require": {},
 	"require-dev": {
-		"phpunit/phpunit": "*"
+		"phpunit/phpunit": "*",
+		"namelesscoder/fluid": "*"
 	},
 	"authors": [
 		{
