@@ -2,7 +2,7 @@
 
 namespace Bleicker\View\Template;
 
-use Bleicker\Framework\Utility\ObjectManager;
+use Bleicker\ObjectManager\ObjectManager;
 use Bleicker\View\AbstractView;
 use TYPO3\Fluid\Core\Cache\FluidCacheInterface;
 use TYPO3\Fluid\Core\Rendering\RenderingContext;
