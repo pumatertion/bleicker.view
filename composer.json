@@ -1,7 +1,7 @@
 {
 	"name": "bleicker/view",
 	"require": {
-		"namelesscoder/fluid": "dev-master as 1.0.0",
+		"namelesscoder/fluid": "dev-master",
 		"bleicker/objectmanager": "~1.0"
 	},
 	"require-dev": {
