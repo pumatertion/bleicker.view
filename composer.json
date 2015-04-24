@@ -1,9 +1,11 @@
 {
 	"name": "bleicker/view",
-	"require": {},
+	"require": {
+		"namelesscoder/fluid": "dev-master",
+		"bleicker/objectmanager": "~1.0"
+	},
 	"require-dev": {
-		"phpunit/phpunit": "*",
-		"namelesscoder/fluid": "*"
+		"phpunit/phpunit": "*"
 	},
 	"authors": [
 		{
@@ -15,5 +17,19 @@
 		"psr-4": {
 			"Bleicker\\View\\": "src"
 		}
-	}
+	},
+	"repositories": [
+		{
+			"type": "git",
+			"url": "git@bitbucket.org:cbleicker/bleicker-objectmanager.git"
+		},
+		{
+			"type": "git",
+			"url": "git@bitbucket.org:cbleicker/bleicker-exception.git"
+		},
+		{
+			"type": "git",
+			"url": "https://github.com/NamelessCoder/TYPO3.Fluid.git"
+		}
+	]
 }
