@@ -2,7 +2,6 @@
 
 namespace Bleicker\View\Template;
 
-use Bleicker\Framework\Registry;
 use Bleicker\Framework\Utility\ObjectManager;
 use Bleicker\View\AbstractView;
 use TYPO3\Fluid\Core\Cache\FluidCacheInterface;
@@ -50,7 +49,7 @@ class View extends AbstractView {
 
 		$this->fluid = new TemplateView($paths, $context);
 
-		if (Registry::getImplementation(FluidCacheInterface::class) !== NULL) {
+		if (ObjectManager::isRegistered(FluidCacheInterface::class)) {
 			$this->fluid->setCache(ObjectManager::get(FluidCacheInterface::class));
 		}
 	}
