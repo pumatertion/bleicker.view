@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "46c2a68bac30dc5156712fe339ef1db5",
+    "hash": "73e3a4d4622cf9e88f5a9e457fc9b84e",
     "packages": [
         {
             "name": "bleicker/exception",
@@ -1053,7 +1053,14 @@
             "time": "2015-03-30 15:54:10"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "1.0.0",
+            "alias_normalized": "1.0.0.0",
+            "version": "9999999-dev",
+            "package": "namelesscoder/fluid"
+        }
+    ],
     "minimum-stability": "stable",
     "stability-flags": {
         "namelesscoder/fluid": 20
