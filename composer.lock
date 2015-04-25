@@ -4,15 +4,21 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "46c2a68bac30dc5156712fe339ef1db5",
+    "hash": "6afea742170543aad78546fbd598f5e2",
     "packages": [
         {
             "name": "bleicker/exception",
             "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "git@bitbucket.org:cbleicker/bleicker-exception.git",
-                "reference": "35cb95105fd045e5e9cc12bf52a06d874f82957b"
+                "url": "https://github.com/pumatertion/bleicker.exception.git",
+                "reference": "dbf4f68b35189b07eb8c546093015e28dccaaaee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pumatertion/bleicker.exception/zipball/dbf4f68b35189b07eb8c546093015e28dccaaaee",
+                "reference": "dbf4f68b35189b07eb8c546093015e28dccaaaee",
+                "shasum": ""
             },
             "require-dev": {
                 "phpunit/phpunit": "*"
@@ -23,6 +29,7 @@
                     "Bleicker\\Exception\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "Carsten Bleicker",
@@ -36,8 +43,14 @@
             "version": "1.0.2",
             "source": {
                 "type": "git",
-                "url": "git@bitbucket.org:cbleicker/bleicker-objectmanager.git",
-                "reference": "27c474e96abe698e39a07bdd0ad71347bd6e1fe9"
+                "url": "https://github.com/pumatertion/bleicker.objectmanager.git",
+                "reference": "639ff3b1eb2aeb4777e7272dc928590b026ce960"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pumatertion/bleicker.objectmanager/zipball/639ff3b1eb2aeb4777e7272dc928590b026ce960",
+                "reference": "639ff3b1eb2aeb4777e7272dc928590b026ce960",
+                "shasum": ""
             },
             "require": {
                 "bleicker/exception": "~1.0"
@@ -51,11 +64,7 @@
                     "Bleicker\\ObjectManager\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Tests\\Bleicker\\ObjectManager\\": "tests"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "Carsten Bleicker",
@@ -70,12 +79,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/NamelessCoder/TYPO3.Fluid.git",
-                "reference": "517b772587fd5cee80c2656e77e4eedca0cf7e29"
+                "reference": "f19ac82cddb9a59ea891b95d2fcae5b82de68b1d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NamelessCoder/TYPO3.Fluid/zipball/f19ac82cddb9a59ea891b95d2fcae5b82de68b1d",
+                "reference": "f19ac82cddb9a59ea891b95d2fcae5b82de68b1d",
+                "shasum": ""
             },
             "require-dev": {
-                "mikey179/vfsstream": "~1.3.0",
+                "mikey179/vfsstream": "*",
                 "namelesscoder/fluid-schema-generator": "*",
-                "phpunit/phpunit": "4.3.*",
+                "phpunit/phpunit": "*",
                 "satooshi/php-coveralls": "*"
             },
             "bin": [
@@ -87,11 +102,12 @@
                     "TYPO3\\Fluid\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "The TYPO3 Fluid template rendering engine",
-            "time": "2015-04-20 23:21:01"
+            "time": "2015-04-25 12:41:59"
         }
     ],
     "packages-dev": [

@@ -17,19 +17,5 @@
 		"psr-4": {
 			"Bleicker\\View\\": "src"
 		}
-	},
-	"repositories": [
-		{
-			"type": "git",
-			"url": "git@bitbucket.org:cbleicker/bleicker-objectmanager.git"
-		},
-		{
-			"type": "git",
-			"url": "git@bitbucket.org:cbleicker/bleicker-exception.git"
-		},
-		{
-			"type": "git",
-			"url": "https://github.com/NamelessCoder/TYPO3.Fluid.git"
-		}
-	]
+	}
 }
