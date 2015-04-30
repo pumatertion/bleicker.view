@@ -2,10 +2,11 @@
 	"name": "bleicker/view",
 	"require": {
 		"namelesscoder/fluid": "dev-master",
-		"bleicker/objectmanager": "~1.0"
+		"bleicker/objectmanager": "1.0.*",
+		"bleicker/registry": "1.1.*"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "*"
+		"phpunit/phpunit": "~4.6"
 	},
 	"authors": [
 		{
@@ -16,6 +17,11 @@
 	"autoload": {
 		"psr-4": {
 			"Bleicker\\View\\": "src"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\Bleicker\\View\\": "tests"
 		}
 	}
 }
