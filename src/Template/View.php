@@ -3,6 +3,7 @@
 namespace Bleicker\View\Template;
 
 use Bleicker\ObjectManager\ObjectManager;
+use Bleicker\Registry\Registry;
 use Bleicker\View\AbstractView;
 use TYPO3\Fluid\Core\Cache\FluidCacheInterface;
 use TYPO3\Fluid\Core\Rendering\RenderingContext;
@@ -24,27 +25,21 @@ class View extends AbstractView {
 	protected $fluid;
 
 	/**
-	 * @param string $controllerName
+	 * @param string $className
 	 * @param string $methodName
 	 * @param string $format
 	 */
-	public function __construct($controllerName, $methodName, $format = 'html') {
+	public function __construct($className, $methodName, $format = 'html') {
 		$context = new RenderingContext();
-		$context->setControllerName($this->ensureControllerNameIsDirectoryPath($controllerName));
+		$context->setControllerName($this->ensureControllerNameIsDirectoryPath($className));
 		$context->setControllerAction($methodName);
 		$context->setVariableProvider(new StandardVariableProvider());
 		$context->injectViewHelperVariableContainer(new ViewHelperVariableContainer());
 
 		$paths = new TemplatePaths();
-		$paths->setTemplateRootPaths(array(
-			ROOT_DIRECTORY . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR
-		));
-		$paths->setLayoutRootPaths(array(
-			ROOT_DIRECTORY . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'Layouts' . DIRECTORY_SEPARATOR
-		));
-		$paths->setPartialRootPaths(array(
-			ROOT_DIRECTORY . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'Partials' . DIRECTORY_SEPARATOR
-		));
+		$paths->setTemplateRootPaths((array)Registry::get('typo3.fluid.templateRootPaths'));
+		$paths->setLayoutRootPaths((array)Registry::get('typo3.fluid.layoutRootPaths'));
+		$paths->setPartialRootPaths((array)Registry::get('typo3.fluid.partialRootPaths'));
 		$paths->setFormat($format);
 
 		$this->fluid = new TemplateView($paths, $context);
@@ -60,6 +55,13 @@ class View extends AbstractView {
 	 */
 	protected function ensureControllerNameIsDirectoryPath($controllerName) {
 		return str_ireplace('\\', DIRECTORY_SEPARATOR, $controllerName);
+	}
+
+	/**
+	 * @return TemplateView
+	 */
+	public function getTemplateView(){
+		return $this->fluid;
 	}
 
 	/**
