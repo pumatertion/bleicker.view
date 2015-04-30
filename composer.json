@@ -5,7 +5,7 @@
 		"bleicker/objectmanager": "~1.0"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "*"
+		"phpunit/phpunit": "~4.6"
 	},
 	"authors": [
 		{
@@ -16,6 +16,11 @@
 	"autoload": {
 		"psr-4": {
 			"Bleicker\\View\\": "src"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\Bleicker\\View\\": "tests"
 		}
 	}
 }

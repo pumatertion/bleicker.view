@@ -4,8 +4,40 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6afea742170543aad78546fbd598f5e2",
+    "hash": "6b4d0b0fb9fa0a5dfd2079d52b413264",
     "packages": [
+        {
+            "name": "bleicker/container",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pumatertion/bleicker.container.git",
+                "reference": "b5d7d75a8a1050c46fadfdf95d94fd7e73668cd9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pumatertion/bleicker.container/zipball/b5d7d75a8a1050c46fadfdf95d94fd7e73668cd9",
+                "reference": "b5d7d75a8a1050c46fadfdf95d94fd7e73668cd9",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bleicker\\Container\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Carsten Bleicker",
+                    "email": "carsten@bleicker.de"
+                }
+            ],
+            "time": "2015-04-26 12:38:26"
+        },
         {
             "name": "bleicker/exception",
             "version": "1.0.0",
@@ -40,19 +72,20 @@
         },
         {
             "name": "bleicker/objectmanager",
-            "version": "1.0.2",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pumatertion/bleicker.objectmanager.git",
-                "reference": "639ff3b1eb2aeb4777e7272dc928590b026ce960"
+                "reference": "a424ea93509a880847db038e8f2c6b3716805e53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pumatertion/bleicker.objectmanager/zipball/639ff3b1eb2aeb4777e7272dc928590b026ce960",
-                "reference": "639ff3b1eb2aeb4777e7272dc928590b026ce960",
+                "url": "https://api.github.com/repos/pumatertion/bleicker.objectmanager/zipball/a424ea93509a880847db038e8f2c6b3716805e53",
+                "reference": "a424ea93509a880847db038e8f2c6b3716805e53",
                 "shasum": ""
             },
             "require": {
+                "bleicker/container": "~1.0",
                 "bleicker/exception": "~1.0"
             },
             "require-dev": {
@@ -71,7 +104,7 @@
                     "email": "carsten@bleicker.de"
                 }
             ],
-            "time": "2015-04-24 14:32:00"
+            "time": "2015-04-26 12:56:58"
         },
         {
             "name": "namelesscoder/fluid",
@@ -79,16 +112,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/NamelessCoder/TYPO3.Fluid.git",
-                "reference": "f19ac82cddb9a59ea891b95d2fcae5b82de68b1d"
+                "reference": "96572954dd9cb799fc7824c79408dc061f1664e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NamelessCoder/TYPO3.Fluid/zipball/f19ac82cddb9a59ea891b95d2fcae5b82de68b1d",
-                "reference": "f19ac82cddb9a59ea891b95d2fcae5b82de68b1d",
+                "url": "https://api.github.com/repos/NamelessCoder/TYPO3.Fluid/zipball/96572954dd9cb799fc7824c79408dc061f1664e1",
+                "reference": "96572954dd9cb799fc7824c79408dc061f1664e1",
                 "shasum": ""
             },
             "require-dev": {
                 "mikey179/vfsstream": "*",
+                "namelesscoder/fluid-lint": "*",
                 "namelesscoder/fluid-schema-generator": "*",
                 "phpunit/phpunit": "*",
                 "satooshi/php-coveralls": "*"
@@ -107,7 +141,7 @@
                 "MIT"
             ],
             "description": "The TYPO3 Fluid template rendering engine",
-            "time": "2015-04-25 12:41:59"
+            "time": "2015-04-26 12:38:28"
         }
     ],
     "packages-dev": [
@@ -216,16 +250,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.4.0",
+            "version": "v1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "8724cd239f8ef4c046f55a3b18b4d91cc7f3e4c5"
+                "reference": "3132b1f44c7bf2ec4c7eb2d3cb78fdeca760d373"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/8724cd239f8ef4c046f55a3b18b4d91cc7f3e4c5",
-                "reference": "8724cd239f8ef4c046f55a3b18b4d91cc7f3e4c5",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/3132b1f44c7bf2ec4c7eb2d3cb78fdeca760d373",
+                "reference": "3132b1f44c7bf2ec4c7eb2d3cb78fdeca760d373",
                 "shasum": ""
             },
             "require": {
@@ -272,7 +306,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2015-03-27 19:31:25"
+            "time": "2015-04-27 22:15:08"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -522,16 +556,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.6.4",
+            "version": "4.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "163232991e652e6efed2f8470326fffa61e848e2"
+                "reference": "3afe303d873a4d64c62ef84de491b97b006fbdac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/163232991e652e6efed2f8470326fffa61e848e2",
-                "reference": "163232991e652e6efed2f8470326fffa61e848e2",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3afe303d873a4d64c62ef84de491b97b006fbdac",
+                "reference": "3afe303d873a4d64c62ef84de491b97b006fbdac",
                 "shasum": ""
             },
             "require": {
@@ -590,7 +624,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-04-11 05:23:21"
+            "time": "2015-04-29 15:18:52"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
