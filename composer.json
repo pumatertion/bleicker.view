@@ -1,5 +1,6 @@
 {
 	"name": "bleicker/view",
+	"type": "library",
 	"require": {
 		"namelesscoder/fluid": "dev-master",
 		"bleicker/objectmanager": "1.0.*",
