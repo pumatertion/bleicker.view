@@ -3,7 +3,7 @@
 	"type": "library",
 	"require": {
 		"namelesscoder/fluid": "dev-master",
-		"bleicker/objectmanager": "1.0.*",
+		"bleicker/objectmanager": "1.1.*",
 		"bleicker/registry": "1.2.*"
 	},
 	"require-dev": {
