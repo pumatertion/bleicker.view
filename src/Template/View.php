@@ -44,7 +44,7 @@ class View extends AbstractView {
 
 		$this->fluid = new TemplateView($paths, $context);
 
-		if (ObjectManager::isRegistered(FluidCacheInterface::class)) {
+		if (ObjectManager::has(FluidCacheInterface::class)) {
 			$this->fluid->setCache(ObjectManager::get(FluidCacheInterface::class));
 		}
 	}
