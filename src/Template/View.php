@@ -37,9 +37,9 @@ class View extends AbstractView {
 		$context->injectViewHelperVariableContainer(new ViewHelperVariableContainer());
 
 		$paths = new TemplatePaths();
-		$paths->setTemplateRootPaths((array)Registry::get('typo3.fluid.templateRootPaths'));
-		$paths->setLayoutRootPaths((array)Registry::get('typo3.fluid.layoutRootPaths'));
-		$paths->setPartialRootPaths((array)Registry::get('typo3.fluid.partialRootPaths'));
+		$paths->setTemplateRootPaths((array)Registry::get('paths.typo3.fluid.templateRootPaths'));
+		$paths->setLayoutRootPaths((array)Registry::get('paths.typo3.fluid.layoutRootPaths'));
+		$paths->setPartialRootPaths((array)Registry::get('paths.typo3.fluid.partialRootPaths'));
 		$paths->setFormat($format);
 
 		$this->fluid = new TemplateView($paths, $context);
